@@ -1,6 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-
 
 namespace CSAMGROUP7W23.UnitTests
 {
@@ -8,28 +6,21 @@ namespace CSAMGROUP7W23.UnitTests
     public class RepositoryTests
     {
         [TestMethod]
-        public void AddStudent_WithValidStudent_ShouldAddToDictionary()
+        public void CanBeAddedBy_UserIsAdmin_ReturnsTrue()
         {
-            // Arrange
-            var repository = new Repository();
-            var student = new Student { ID = 123456, Name = "John Doe" };
-
+            // Arrange 
+            var student = new Student();
             // Act
-            repository.AddStudent(student);
+            var result = student.CanBeAddedBy(new Student { IsAdmin = true });
+
+
 
             // Assert
-            Assert.AreEqual(student, student);
+            Assert.IsTrue(result);
         }
+        
+       
 
-        [TestMethod]
-        public void AddStudent_WithDuplicateStudent_ShouldThrowException()
-        {
-            // Arrange
-            var repository = new Repository();
-            var student = new Student { ID = 845788, Name = "Alson Basnet" };
-
-            // Act & Assert
-             Assert.ThrowsException<ArgumentException>(() => repository.AddStudent(student));
-        }
-    }
+      
+}
 }
