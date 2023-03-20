@@ -8,11 +8,12 @@
             students = new Dictionary<string, Student>();
             new List<Student> {
 
-                new Student { ID = 841087, Name = "Nabin Gurung" },
+                
                 new Student { ID = 845788, Name = "Alson Basnet"},
                 new Student { ID = 841895, Name = "Bablu Yadav" },
                 new Student { ID = 846275, Name = "Bijay Koirala"},
-                new Student { ID = 843695, Name = "Emre Uras"}
+                new Student { ID = 843695, Name = "Emre Uras"},
+                new Student { ID = 841087, Name = "Nabin Gurung" }
 
             }.ForEach(p => AddStudent(p));
         }
