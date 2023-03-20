@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'CSAMGROUP7W23'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_121128CD8DA04ADD9D2CD458AECCC734 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C6227A08B80440E4928AA75668253B60 }}
           package: .
